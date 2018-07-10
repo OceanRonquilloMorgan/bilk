@@ -9,11 +9,13 @@ SHORTCODE_MIN = getattr(settings, "SHORTCODE_MIN", 6)
 #from shortener.models import ShortenMeURL
 
 def code_generator(size=SHORTCODE_MIN, chars=string.ascii_lowercase + string.digits):
-    # new_code = ''
-    # for _ in range(size):
-    #     new_code += random.choice(chars)
-    # return new_code
-    return ''.join(random.choice(chars) for _ in range(size))
+    # return ''.join(random.choice(chars) for _ in range(size))
+    new_code= ''
+     for _ in range(len):
+         new_code += random.choice(chars)
+
+     new_code = "http://bilk.herokuapp.com/{0}".format(new_code)
+     return new_code
 
 
 def create_shortcode(instance, size=SHORTCODE_MIN):
