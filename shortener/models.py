@@ -51,7 +51,7 @@ class ShortenMeURL(models.Model):
 
 	# returns shortened URL link to user
 	def get_short_url(self):
-		url_path = "http://bilk.herokuapp.com" + self.shortcode
+		url_path = "http://bilk.herokuapp.com" + self.shortcode + "/"
 		return url_path
 
 '''
