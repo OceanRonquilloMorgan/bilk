@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jivy | {% block title %} URL Shortening Service {% endblock title %}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://codepen.io/oceanronquillomorgan/pen/VBZqZv.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+    		<div class="container">
+    			<!-- Nav -->
+    			<div class="masthead clearfix">
+		        	<div class="container inner">
+		            	<h3 class="masthead-brand">Jivy</h3>
+		            	<nav>
+		                	<ul class="nav masthead-nav">
+		                  		<li class="active"><a href="#">Source Code</a></li>
+		                	</ul>
+		              	</nav>
+		            </div>
+		        </div>
+		        <!-- Inner Content -->
+    			<div class="inner cover">
+	          		{% block content %}
+		            {% endblock content %}
+		        </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ object.shortcode }} | {{ block.super }} 
+{% endblock title %}
+
+{% block content %}
+<div class=''>
+	<h1>Already Exists!</h1>
+
+	<!-- show original URL and existing short URL -->
+	<p>{{ object.url }}</p>
+
+	<!-- show amount of attempts to add existing URL -->
+	{% if object.clickevent.count %} 
+    	<p>Count: {{ object.clickevent.count }}</p> 
+    {% endif %}
+
+	<p><a class='btn btn-primary btn-link' href='{{ object.get_short_url }}'>{{ object.get_short_url }}</a></p>
+
+	<!-- redirect back to homepage -->
+	<a class='btn btn-default' href='/'>+ New</a>
+</div>
+{% endblock content %}
