@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'shortenme.urls'
 ROOT_HOSTCONF = 'shortenme.hosts'
-DEFAULT_HOST = 'www'
+DEFAULT_HOST = 'bilk.herokuapp.com'
 DEFAULT_REDIRECT_URL = "https://bilk.herokuapp.com/"
 PARENT_HOST = "bilk.herokuapp.com"
 
