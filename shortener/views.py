@@ -21,7 +21,7 @@ class HomeView(View):
 		the_form = SubmitUrlForm()
 
 		context = {
-			"title": "Jivy.",
+			"title": "Bilk.",
 			"form": the_form
 		}
 
@@ -32,7 +32,7 @@ class HomeView(View):
 		form = SubmitUrlForm(request.POST)
 
 		context = {
-			"title": "Jivy.",
+			"title": "Bilk.",
 			"form": form
 		}
 
