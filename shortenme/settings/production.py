@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bilk.herokuapp.com', 'www.bilk.herokuapp.com']
+ALLOWED_HOSTS = ['bilk.herokuapp.com']
 
 
 # Application definition
