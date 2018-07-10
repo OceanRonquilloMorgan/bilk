@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['jivy.herokuapp.com', 'www.jivy.herokuapp.com']
+ALLOWED_HOSTS = ['bilk.herokuapp.com', 'www.bilk.herokuapp.com']
 
 
 # Application definition
@@ -59,8 +59,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'shortenme.urls'
 ROOT_HOSTCONF = 'shortenme.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "http://jivy.herokuapp.com"
-PARENT_HOST = "jivy.herokuapp.com"
+DEFAULT_REDIRECT_URL = "http://bilk.herokuapp.com/"
+PARENT_HOST = "bilk.herokuapp.com"
 
 TEMPLATES = [
     {
