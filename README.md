@@ -9,3 +9,7 @@ Bilk is a web application built with Python / Django that allows anyone to conve
 - <strong>Front-end:</strong> Bootstrap
 - <strong>Back-end:</strong> Django, Python, PostgreSQL
 - <strong>Deployment:</strong> Heroku
+
+## Future Plans
+
+Ideally, I would like to acquire a domain such as 'bilk.co' so links can be as succinct possible. The current herokuapp extension adds a significant amount of characters to shortened links.
