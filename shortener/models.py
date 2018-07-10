@@ -13,23 +13,15 @@ SHORTCODE_MAX = getattr(settings, "SHORTCODE_MAX", 15)
 
 # model manager
 class ShortenMeURLManager(models.Manager):
-	def all(self, *args, **kwargs):
-		qs_main = super(ShortenMeURLManager, self).all(*args, **kwargs)
-		qs = qs_main.filter(active=True)
-		return qs
+	def all(self,*args,**kwargs):
+		return super(ShortenMeURLManager, self).all(*args,**kwargs).filter(active=True)
 
 	# custom command 'refreshcodes'
-	def refresh_shortcodes(self, items=100):
-		# get every query set
+	def refresh_shortcodes(self):
 		qs = ShortenMeURL.objects.filter(id__gte=1)
-		# use built-in python methods
-		if items is not None and isinstance(items, int):
-			# reverse query set
-			qs = qs.order_by('-id')[:items]
 		new_codes = 0
 		for q in qs:
 			q.shortcode = create_shortcode(q)
-			print(q.id)
 			q.save()
 			new_codes += 1
 		return "New codes made: {i}".format(i=new_codes)
@@ -52,10 +44,10 @@ class ShortenMeURL(models.Model):
 		super(ShortenMeURL, self).save(*args, **kwargs)
 
 	def __str__(self):
-		return smart_text(self.url)
+		return str(self.url)
 
 	def __unicode__(self):
-		return smart_text(self.url)
+		return str(self.url)
 
 	# returns shortened URL link to user
 	def get_short_url(self):
