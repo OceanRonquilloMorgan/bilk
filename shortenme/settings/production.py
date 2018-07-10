@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bilk.herokuapp.com', 'www.bilk.herokuapp.com']
+ALLOWED_HOSTS = ['bilk.herokuapp.com']
 
 
 # Application definition
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'shortenme.urls'
 ROOT_HOSTCONF = 'shortenme.hosts'
-DEFAULT_HOST = 'bilk.herokuapp.com'
+DEFAULT_HOST = 'www'
 DEFAULT_REDIRECT_URL = "https://bilk.herokuapp.com/"
 PARENT_HOST = "bilk.herokuapp.com"
 
