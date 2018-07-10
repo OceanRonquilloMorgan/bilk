@@ -51,7 +51,7 @@ class ShortenMeURL(models.Model):
 
 	# returns shortened URL link to user
 	def get_short_url(self):
-		url_path = reverse("scode", kwargs={ 'shortcode': self.shortcode }, host='', scheme='http')
+		url_path = reverse("scode", kwargs={ 'shortcode': self.shortcode }, host='www', scheme='http')
 		return url_path
 
 '''
