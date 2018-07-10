@@ -49,7 +49,7 @@ class ShortenMeURL(models.Model):
 			self.shortcode = create_shortcode(self)
 		if not "http" in self.url:
 			self.url = "http://" + self.url
-		super(KirrURL, self).save(*args, **kwargs)
+		super(ShortenMeURL, self).save(*args, **kwargs)
 
 	def __str__(self):
 		return smart_text(self.url)
@@ -59,8 +59,8 @@ class ShortenMeURL(models.Model):
 
 	# returns shortened URL link to user
 	def get_short_url(self):
-		url_path = reverse("shortcode", kwargs={ 'shortcode': self.shortcode }, host='www', scheme='http')
-		return url_path
+        url_path = reverse("scode", kwargs={'shortcode': self.shortcode}, host='www', scheme='http')
+        return url_path
 
 '''
 python manage.py makemigrations
