@@ -40,7 +40,7 @@ class HomeView(View):
 
 		# check if url is valid
 		if form.is_valid():
-			new_url = form.cleaned_data.get("url")
+			new_url = form.cleaned_data['url']
 			obj, created = ShortenMeURL.objects.get_or_create(url=new_url)
 
 			context = {
@@ -59,7 +59,7 @@ class HomeView(View):
 
 # class-based view
 class URLRedirectView(View):
-	def get(self, request, shortcode=None, *args, **kwargs):
+	def get(self, request, shortcode=None):
 		obj = get_object_or_404(ShortenMeURL, shortcode=shortcode)
 		# save item
 		print(ClickEvent.objects.create_event(obj))
